@@ -36,7 +36,7 @@ public class App {
         server.start();
 
         System.out.println(
-                "Server started on http://localhost:8081"
+                "Server started on http://52.14.43.24:8080"
         );
     }
 }
