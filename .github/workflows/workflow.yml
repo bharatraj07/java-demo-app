@@ -1,7 +1,9 @@
 name: java-demo-app
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
 
 env:
   DOCKER_IMAGE_NAME: bharatraj07/java-demo-app
@@ -46,7 +48,7 @@ jobs:
         mvn sonar:sonar \
         -Dsonar.projectKey=$SONAR_PROJECT_NAME \
         -Dsonar.host.url=$SONAR_URL \
-        -Dsonar.token=$SONAR_KEY
+        -Dsonar.token=$SONAR_TOKEN
   
     - name: qualitygate-analysis
       uses: SonarSource/sonarqube-quality-gate-action@v1.2.0
