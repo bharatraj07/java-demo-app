@@ -53,6 +53,8 @@ jobs:
     - name: qualitygate-analysis
       uses: SonarSource/sonarqube-quality-gate-action@v1.2.0
       timeout-minutes: 10
+      with:
+        scanMetadataReportFile: target/sonar/report-task.txt
       env:
           SONAR_URL: ${{secrets.SONAR_URL}}
           SONAR_TOKEN: ${{ secrets.SONAR_KEY }}
