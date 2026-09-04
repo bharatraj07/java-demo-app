@@ -8,6 +8,7 @@ on:
 env:
   DOCKER_IMAGE_NAME: bharatraj07/java-demo-app
   SONAR_PROJECT_NAME: java-demo-app
+  DOCKER_CONTAINER_NAME: java-demo-app
 
 permissions:
   contents: read
